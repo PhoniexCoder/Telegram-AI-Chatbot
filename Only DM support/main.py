@@ -13,9 +13,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Configure Google Gemini API
-genai.configure(api_key='AIzaSyDC0qEt-RmlXLSCRxOVjw97CYKKtp6fif8')
-
-# Initialize the model
+genai.configure(api_key='your_api_key_here')
 model = genai.GenerativeModel('gemini-pro')
 
 # Store conversations: user_id -> list of (timestamp, role, content)
@@ -99,8 +97,7 @@ async def clear_history(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
         await update.message.reply_text("No conversation history to clear!")
 
 def main() -> None:
-    # Initialize application
-    application = Application.builder().token('7688969617:AAHMogPaXG_9P-g-Gn7POhXrFMEoX1cmYZc').build()
+    application = Application.builder().token('your_bot_token_here').build()
 
     # Add handlers
     application.add_handler(CommandHandler('start', start))
