@@ -1,19 +1,53 @@
-# Telegram-AI-Chatbot
-This project is a Telegram chatbot powered by Google's Gemini API, designed to provide intelligent, context-aware responses in both group chats and private messages. The bot stores conversation history and leverages it to generate relevant, coherent replies based on previous interactions.
-### Features:
-- **AI-Powered Responses:** The bot uses Google Gemini API to generate natural, intelligent responses.
-- **Conversation Memory:** The bot stores conversation history and uses it to provide context-aware responses.
-- **Supports Group and Private Chats:** The bot works both in group chats (with customizable settings) and private messages.
-- **Customizable Settings for Group Chats:** Admins can set behaviors such as always replying or limiting the number of recent messages used for context.
-- **Error Handling and Logging:** The bot includes error management to ensure smooth operation, along with logging for debugging.
+# Telegram AI Chatbot
 
-## How to Use
+This repository contains a Telegram-based AI chatbot that leverages Google's Gemini API to engage users in conversations. The bot is available in two versions:
 
-### Deploying the Bot
-1. **Clone the Repository:**
-    ```bash
-    git clone https://github.com/your-username/telegram-ai-assistant.git
-    cd telegram-ai-assistant
+1. **Version 1** - DM Support Only
+2. **Version 2** - Group and DM Support
+
+The bot can be interacted with by users to get intelligent responses based on their messages.
+
+You can interact with the bot by visiting [this link](https://t.me/convospark_bot).
+
+## Features
+
+### Version 1: DM Support Only
+- **Start**: Initializes the conversation with a welcome message.
+- **Alive**: Checks if the bot is online and responds.
+- **History**: Displays the recent conversation history.
+- **Clear**: Clears the conversation history.
+
+This version supports only Direct Messages (DM) with the bot.
+
+### Version 2: Group and DM Chat Support
+- **Start**: Initializes the conversation with a welcome message.
+- **Alive**: Checks if the bot is online and responds.
+- **Settings**: Available for group chats. Allows admins to configure bot settings (e.g., always replying, max message history).
+- **Forget**: Clears the conversation history (in both group and DM chats).
+
+Version 2 supports both Group Chats and Direct Messages. It allows group admins to control bot behavior via settings.
+
+## Bot Commands
+
+### Version 1 (DM Only):
+- `/start`: Start the conversation with the bot.
+- `/alive`: Check if the bot is online and responding.
+- `/history`: View the most recent conversations.
+- `/clear`: Clear the conversation history.
+
+### Version 2 (Group + DM Support):
+- `/start`: Start the conversation with the bot.
+- `/alive`: Check if the bot is online and responding.
+- `/settings`: Used by group admins to set bot behavior (e.g., enabling/disabling replies in groups).
+- `/forget`: Clears all the conversation history, both in group chats and DMs.
+
+## How to Run
+
+To run this bot on your own server:
+
+1. Clone this repository to your local machine or server:
+   ```bash
+   git clone https://github.com/PhoniexCoder/Telegram-AI-Chatbot.git
     ```
 
 2. **Install Dependencies:**
