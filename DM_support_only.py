@@ -12,10 +12,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Configure Google Gemini API
-genai.configure(api_key='AIzaSyDC0qEt-RmlXLSCRxOVjw97CYKKtp6fif8')
-
-# Initialize the model
+genai.configure(api_key='YOUR_GEMINI_API')
 model = genai.GenerativeModel('gemini-pro')
 
 # Store conversations: user_id -> list of (timestamp, role, content)
@@ -100,7 +97,7 @@ async def clear_history(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
 
 def main() -> None:
     # Initialize application
-    application = Application.builder().token('7688969617:AAHMogPaXG_9P-g-Gn7POhXrFMEoX1cmYZc').build()
+    application = Application.builder().token('TELEGRAM_BOT_TOKEN').build()
 
     # Add handlers
     application.add_handler(CommandHandler('start', start))
