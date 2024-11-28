@@ -13,7 +13,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Configure Google Gemini API
-genai.configure(api_key='AIzaSyDC0qEt-RmlXLSCRxOVjw97CYKKtp6fif8')
+genai.configure(api_key='YOUR_GEMINI_API')
 model = genai.GenerativeModel('gemini-pro')
 
 # Store conversations and group settings
@@ -144,7 +144,7 @@ async def clear_history(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
         await update.message.reply_text("No conversation history to forget!")
 
 def main() -> None:
-    application = Application.builder().token('7688969617:AAHMogPaXG_9P-g-Gn7POhXrFMEoX1cmYZc').build()
+    application = Application.builder().token('TELEGRAM_BOT_TOKEN').build()
 
     # Handlers
     application.add_handler(CommandHandler('start', start))
