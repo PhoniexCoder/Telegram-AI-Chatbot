@@ -25,7 +25,7 @@ This project is a Telegram chatbot powered by Google's Gemini API, designed to p
 3. **Set Up Google Gemini API Key:**
     You’ll need to obtain an API key from Google Gemini. Set your API key in the script where it's referenced:
     ```python
-    genai.configure(api_key='your-api-key-here')
+    genai.configure(api_key='YOUR_API_KEY')
     ```
 
 4. **Create a Telegram Bot:**
@@ -35,7 +35,7 @@ This project is a Telegram chatbot powered by Google's Gemini API, designed to p
 5. **Set Up Telegram Token:**
     Set your bot's token in the code:
     ```python
-    application = Application.builder().token('your-bot-token-here').build()
+    application = Application.builder().token('TELEGRAM_BOT_TOKEN').build()
     ```
 
 6. **Run the Bot:**
@@ -65,5 +65,3 @@ This project is a Telegram chatbot powered by Google's Gemini API, designed to p
 
 ## Contributions
 Feel free to fork the project and contribute by submitting pull requests. For issues, please open an issue on the [GitHub Issues page](https://github.com/your-username/telegram-ai-assistant/issues).
-
-## License
